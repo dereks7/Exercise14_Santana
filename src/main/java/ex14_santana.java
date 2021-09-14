@@ -22,16 +22,13 @@ public class ex14_santana
         Scanner in2 = new Scanner(System.in);
         String state = in2.nextLine();
         double sub = Double.parseDouble(ord);
-        System.out.println("The subtotal is $" + sub + ".");
+        System.out.printf("The subtotal is $%.2f.\n",sub);
         double tax=0;
         if (!state.equals("MN")) {
             tax = sub * 0.055;
         }
-        if(state.equals("MN"))
-            tax = 0.0;
-        System.out.println("The tax is $" + tax + ".");
+        System.out.printf("The tax is $%.2f.\n",tax);
         double tot = tax + sub;
-        double round = Math.round(tot * 100.0) / 100.0;
-        System.out.println("The total is $" + round + ".");
+        System.out.printf("The total is $%.2f.",tot);
     }
 }
